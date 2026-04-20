@@ -1,0 +1,134 @@
+/* Dashboard.css */
+
+.dashboard-page {
+  padding: 0;
+}
+
+.dashboard-page h3 {
+  margin: 0 0 20px;
+  color: #295f98;
+  font-size: 20px;
+}
+
+.dashboard-loading {
+  padding: 48px;
+  text-align: center;
+  color: #888;
+}
+
+/* ── SUMMARY CARDS ── */
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.dashboard-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  border-radius: 16px;
+  color: #fff;
+}
+
+.dashboard-card.blue {
+  background: linear-gradient(135deg, #3a7bd5, #295f98);
+}
+.dashboard-card.green {
+  background: linear-gradient(135deg, #27ae60, #1e8449);
+}
+.dashboard-card.purple {
+  background: linear-gradient(135deg, #8e44ad, #6c3483);
+}
+.dashboard-card.orange {
+  background: linear-gradient(135deg, #e67e22, #ca6f1e);
+}
+.dashboard-card.red {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+.dashboard-card.teal {
+  background: linear-gradient(135deg, #16a085, #0e6655);
+}
+
+.dashboard-card-icon {
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+.dashboard-card-info p {
+  margin: 0 0 4px;
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.dashboard-card-info h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* ── CHARTS ── */
+.dashboard-charts {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.dashboard-chart-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.dashboard-chart-card h4 {
+  margin: 0 0 16px;
+  color: #295f98;
+  font-size: 15px;
+}
+
+/* ── BOTTOM TABLES ── */
+.dashboard-bottom {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.dashboard-table-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  overflow-x: auto;
+}
+
+.dashboard-bottom h4 {
+  margin: 0 0 16px;
+  color: #295f98;
+  font-size: 15px;
+}
+
+/* ── TABLET ── */
+@media (min-width: 480px) {
+  .dashboard-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ── DESKTOP ── */
+@media (min-width: 768px) {
+  .dashboard-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .dashboard-charts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dashboard-bottom {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

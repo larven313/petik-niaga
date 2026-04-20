@@ -1,0 +1,128 @@
+/* Login.css */
+
+.login-page {
+  min-height: 100vh;
+  background: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  font-family: sans-serif;
+}
+
+.login-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px 32px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ── LOGO ── */
+.login-logo {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.login-logo-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: #3a7bd5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0 auto 12px;
+  transition: all 0.25s ease;
+}
+
+.login-logo-icon:hover {
+  transform: translateY(-10%);
+  transition: transform 0.3s ease;
+}
+
+.login-logo h2 {
+  margin: 0 0 4px;
+  color: #295f98;
+  font-size: 22px;
+}
+
+.login-logo p {
+  margin: 0;
+  color: #888;
+  font-size: 14px;
+}
+
+/* ── FORM ── */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.login-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.login-field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #295f98;
+}
+
+.login-field input {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1.5px solid #e5e7eb;
+  outline: none;
+  font-size: 14px;
+  color: #1a1a1a;
+  transition: border-color 0.2s ease;
+}
+
+.login-field input:focus {
+  border-color: #3a7bd5;
+}
+
+.login-input-error {
+  border-color: #e74c3c !important;
+}
+
+/* ── ERROR ── */
+.login-error {
+  color: #e74c3c;
+  font-size: 13px;
+  text-align: center;
+  background: #fdf0f0;
+  padding: 10px 14px;
+  border-radius: 10px;
+}
+
+/* ── BUTTON ── */
+.login-btn {
+  padding: 13px;
+  background: #3a7bd5;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  margin-top: 4px;
+}
+
+.login-btn:hover:not(:disabled) {
+  opacity: 0.85;
+}
+
+.login-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

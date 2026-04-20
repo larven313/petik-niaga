@@ -1,0 +1,14 @@
+.kategori-page .kategori-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.error {
+  color: red;
+  font-size: 13px;
+}
+
+.form-wrapper .form-grid .input-error {
+  outline: none;
+  border: 1px solid red;
+}

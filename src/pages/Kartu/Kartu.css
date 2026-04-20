@@ -1,0 +1,4 @@
+.kartu-page .kartu-header {
+  display: flex;
+  justify-content: space-between;
+}

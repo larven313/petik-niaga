@@ -1,0 +1,34 @@
+.btn-grup {
+  display: grid;
+  justify-content: end;
+}
+
+.btn-add {
+  width: 10vw;
+  background-color: green;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
+}
+
+.btn-add:hover {
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.table-wrapper .table tr .action-cell button {
+  margin: 2px;
+}
+
+.pesanan-page .pesanan-header {
+  display: flex;
+  justify-content: space-between;
+}

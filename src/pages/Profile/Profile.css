@@ -1,0 +1,261 @@
+/* Profile.css */
+
+.profile-loading {
+  padding: 48px;
+  text-align: center;
+  color: #888;
+}
+
+/* ── WRAPPER ── */
+.profile-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ── AVATAR CARD ── */
+.profile-avatar-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #3a7bd5;
+  background: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-nama {
+  margin: 0;
+  font-size: 18px;
+  color: #1a1a1a;
+}
+
+.profile-role-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: #e8f0fd;
+  color: #295f98;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.profile-upload-btn {
+  padding: 8px 16px;
+  border-radius: 10px;
+  background: #f2f2f2;
+  color: #295f98;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.profile-upload-btn:hover {
+  background: #e8f0fd;
+}
+
+/* ── FORM CARD ── */
+.profile-form-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ── FIELD ── */
+.profile-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.profile-field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #295f98;
+}
+
+.profile-field input {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1.5px solid #e5e7eb;
+  outline: none;
+  font-size: 14px;
+  color: #1a1a1a;
+  transition: border-color 0.2s ease;
+}
+
+.profile-field input:focus {
+  border-color: #3a7bd5;
+}
+
+.profile-optional {
+  color: #aaa;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+/* ── INFO ROW (role & status) ── */
+.profile-info-row {
+  display: flex;
+  gap: 16px;
+}
+
+.profile-info-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+.profile-info-label {
+  font-size: 12px;
+  color: #888;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.profile-info-value {
+  font-size: 14px;
+  color: #1a1a1a;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.profile-status {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: capitalize;
+  padding: 2px 8px;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+.profile-status.aktif {
+  background: #d4edda;
+  color: #155724;
+}
+
+.profile-status.nonaktif {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* ── NOTIF ── */
+.profile-sukses {
+  padding: 12px 14px;
+  background: #d4edda;
+  color: #155724;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.profile-error-banner {
+  padding: 12px 14px;
+  background: #fde8e8;
+  color: #e74c3c;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+/* ── TABS ── */
+.profile-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.profile-tab {
+  padding: 8px 20px;
+  border-radius: 10px;
+  border: 1.5px solid #e5e7eb;
+  background: #fff;
+  color: #295f98;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.profile-tab:hover {
+  background: #f0f6ff;
+  border-color: #3a7bd5;
+}
+
+.profile-tab.active {
+  background: #3a7bd5;
+  color: #fff;
+  border-color: #3a7bd5;
+}
+
+/* ── KARTU MEMBERSHIP ── */
+.profile-kartu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #f8d76a, #e6b800);
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #5a4000;
+}
+
+.profile-kartu small {
+  font-size: 11px;
+  opacity: 0.8;
+}
+
+/* ── FORM AREA ── */
+.profile-form-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── DESKTOP ── */
+@media (min-width: 768px) {
+  .profile-wrapper {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .profile-avatar-card {
+    width: 240px;
+    flex-shrink: 0;
+  }
+
+  .profile-form-card {
+    flex: 1;
+  }
+}
