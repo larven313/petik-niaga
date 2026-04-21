@@ -2,7 +2,7 @@ name: Build and Deploy
 
 on:
   push:
-    branches: [main]
+    branches: [ main ]
 
 jobs:
   build-and-deploy:
@@ -17,8 +17,10 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "18"
+          node-version: "20"
           cache: "npm"
+        env:
+          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
       # 3. Install dependencies
       - name: Install dependencies
@@ -26,7 +28,7 @@ jobs:
 
       # 4. Cek kualitas kode (lint)
       - name: Lint
-        run: npm run lint
+        run: npm run lint  -- --max-warnings 50
 
       # 5. Build project
       - name: Build
