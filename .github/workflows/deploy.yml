@@ -45,7 +45,7 @@ jobs:
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
-          key_path: /tmp/deploy_key
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
           source: "dist/"
           target: "/home/petikniaga.psjpetik.my.id/public_html"
           strip_components: 1
