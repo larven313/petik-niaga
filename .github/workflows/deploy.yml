@@ -17,8 +17,6 @@ jobs:
         with:
           node-version: "24"
           cache: "npm"
-        env:
-          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
       - name: Install dependencies
         run: npm ci
@@ -34,11 +32,6 @@ jobs:
           VITE_FRONTEND_URL: ${{ secrets.VITE_FRONTEND_URL }}
           VITE_AUTH_URL: ${{ secrets.VITE_AUTH_URL }}
           VITE_GOOGLE_CLIENT_ID: ${{ secrets.VITE_GOOGLE_CLIENT_ID }}
-
-      - name: Setup SSH Key
-        run: |
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" | base64 -d > /tmp/deploy_key
-          chmod 600 /tmp/deploy_key
 
       - name: Deploy ke CyberPanel
         uses: appleboy/scp-action@v0.1.7
