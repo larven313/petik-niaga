@@ -9,45 +9,43 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Ambil kode dari GitHub
       - name: Checkout kode
         uses: actions/checkout@v4
 
-      # 2. Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "24"
           cache: "npm"
         env:
           FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
-      # 3. Install dependencies
       - name: Install dependencies
         run: npm ci
 
-      # 4. Cek kualitas kode (lint)
       - name: Lint
-        run: npm run lint  -- --max-warnings 50
+        run: npm run lint -- --max-warnings 50
 
-      # 5. Build project
       - name: Build
         run: npm run build
         env:
-          # Kalau punya env variable, tambahkan di sini
           VITE_API_URL: ${{ secrets.VITE_API_URL }}
           VITE_MIDTRANS_CLIENT_KEY: ${{ secrets.VITE_MIDTRANS_CLIENT_KEY }}
           VITE_FRONTEND_URL: ${{ secrets.VITE_FRONTEND_URL }}
           VITE_AUTH_URL: ${{ secrets.VITE_AUTH_URL }}
           VITE_GOOGLE_CLIENT_ID: ${{ secrets.VITE_GOOGLE_CLIENT_ID }}
 
-      # 6. Deploy ke server via SSH
+      - name: Setup SSH Key
+        run: |
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" | base64 -d > /tmp/deploy_key
+          chmod 600 /tmp/deploy_key
+
       - name: Deploy ke CyberPanel
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USERNAME }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          key_path: /tmp/deploy_key
           source: "dist/"
           target: "/home/petikniaga.psjpetik.my.id/public_html"
           strip_components: 1
